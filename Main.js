@@ -57,5 +57,3 @@ return word
 }
 getTime()
 setInterval(getTime, 1000)
-<script src="Main.js">
-<link rel="stylesheet" type="text/css" href="Main.css">

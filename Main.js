@@ -1,8 +1,20 @@
 var text = document.getElementById('timeSince')
 var title = document.getElementById('title')
+var timeline = document.getElementById("tl")
+var duckImg = document.getElementsByTagName('img')[0]
+var duckQuack = document.getElementsByTagName('audio')[0]
+
+duckImg.onclick = function(){
+	duckQuack.play()
+	duckImg.style.transform = "translate(-350px) rotate(90deg)"
+}
+
+
+timeline.style.top = window.innerHeight + "px"
+
 function timeSince(date) {
 var seconds = date / 1000
-title.innerHTML = seconds + 'Seconds'
+title.innerHTML = Math.floor(seconds / (60*60*24)) + ' Days'
 //Get years
 var years = Math.floor(seconds / (60*60*24*7*4.21857142857*12))
 seconds -= years * (60*60*24*7*4.21857142857*12)

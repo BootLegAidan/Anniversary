@@ -1,6 +1,8 @@
 var text = document.getElementById('timeSince')
+var title = document.getElementById('title')
 function timeSince(date) {
 var seconds = date / 1000
+title.innerHTML = seconds + 'Seconds'
 //Get years
 var years = Math.floor(seconds / (60*60*24*7*4.21857142857*12))
 seconds -= years * (60*60*24*7*4.21857142857*12)
